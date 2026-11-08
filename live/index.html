@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ProKeeper Live Spectator Portal</title>
+    <meta http-equiv="refresh" content="0; url=https://app.prokeeper.org/live">
+    <link rel="canonical" href="https://app.prokeeper.org/live">
+    <script>
+        // Redirect immediately preserving any query or path if reached statically
+        const pathParts = window.location.pathname.split('/').filter(Boolean);
+        const code = pathParts.length > 1 ? pathParts[1] : '';
+        const targetUrl = code 
+            ? `https://app.prokeeper.org/live/${encodeURIComponent(code)}${window.location.search}`
+            : `https://app.prokeeper.org/live${window.location.search}`;
+        window.location.replace(targetUrl);
+    </script>
+</head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0b0f19; color: #f8fafc; display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; text-align: center; padding: 1.5rem;">
+    <div>
+        <h1 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem;">Redirecting to ProKeeper Live...</h1>
+        <p style="color: #94a3b8; font-size: 0.95rem;">If you are not redirected automatically, <a href="https://app.prokeeper.org/live" style="color: #3b82f6; text-decoration: underline;">click here to enter the live game portal</a>.</p>
+    </div>
+</body>
+</html>
+
